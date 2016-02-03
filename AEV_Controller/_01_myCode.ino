@@ -56,6 +56,11 @@ motorSpeed(4,20);
 goFor(2);
 reverse(4);
 motorSpeed(4,25);
+goFor(4);
+brake(4);
+goFor(1);
+reverse(4);
+motorSpeed(4,25);
 goFor(2);
 brake(4);
   
