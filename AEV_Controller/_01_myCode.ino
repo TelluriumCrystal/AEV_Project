@@ -47,6 +47,17 @@ void myCode()
      Continues the last command for the specified time
      t = time (seconds)
 
+     reflectanceSensorTest();
+     Initiates the reflectance sensor serial readout
+
+     goToRelativePosition(m);
+     Continues the last command for the specified number of marks from the current position
+     m = marks
+
+     goToAbsolutePosition(m);
+     Continues the last command for the specified number of marks from the starting position
+     m = marks
+
   */
   
   /*celerate(1,0,15,2.5);
