@@ -60,44 +60,7 @@ void myCode()
 
   */
   
-  /*celerate(1,0,15,2.5);
-  motorSpeed(1,15);
-  goFor(1);         
-  brake(1);
-  goFor(1);
-  celerate(2,0,27,4);
-  motorSpeed(2,27);
-  goFor(2.7);
-  celerate(2,27,15,1);
-  brake(2);
-  goFor(1);
-  reverse(4);
-  celerate(4,0,31,2);
-  motorSpeed(4,35);
-  goFor(1);
-  brake(2);
-  goFor(1);
-  motorSpeed(2,35);
-  goFor(3);
-  brake(4);
-  goFor(1);
-  reverse(1);
-  celerate(1,0,19,2);
-  motorSpeed(2,35);
-  goFor(2);
-  motorSpeed(1,19);
-  goFor(2);
-  motorSpeed(4,19);
-  goFor(2);
-  celerate(4,19,0,3);
-  brake(4);*/
-  
-  motorSpeed(4,50);
-  goFor(3);
-  reverse(4);
-  motorSpeed(4,50);
-  goFor(3);
-  brake(4);
+  reflectanceSensorTest();
   
   // And here--------------------------------------------------------------------------------
 
