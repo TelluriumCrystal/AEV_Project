@@ -60,7 +60,15 @@ void myCode()
 
   */
   
-  reflectanceSensorTest();
+  reverse(4);
+  motorSpeed(4,25);
+  goFor(2);
+  motorSpeed(4,20);
+  goToAbsolutePosition(332);
+  reverse(4);
+  motorSpeed(4,30);
+  goFor(1);
+  brake(4);
   
   // And here--------------------------------------------------------------------------------
 
