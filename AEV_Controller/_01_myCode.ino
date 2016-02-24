@@ -65,12 +65,10 @@ void myCode()
   
   // Main code
   motorSpeed(4,20);
-  goFor(2);
-  motorSpeed(4,15);
-  goToAbsolutePosition(758);
+  goToAbsolutePosition(350);
   reverse(4);
-  motorSpeed(4,15);
-  goFor(1);
+  motorSpeed(4,25);
+  goFor(2.5);
   brake(4);
   
   // And here--------------------------------------------------------------------------------
