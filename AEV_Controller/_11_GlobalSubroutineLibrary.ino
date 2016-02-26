@@ -57,7 +57,7 @@ void recordData(unsigned long numOfMillisLapsed)
   configuration.bvolts       = bVolts;
   configuration.tMarks       = encoderTotal;
   configuration.pMarks       = encoderPos;
-    
+  
   // Write to EEprom  
   eeWrite(nBytes,configuration);
   delay(5);
@@ -109,7 +109,7 @@ int getSamples(byte pin, int numOfSamples, char type)
   // Determine analog type
   if (type=='e') // Take current reading
   {
-    analogReference(EXTERNAL); // When taking current data us EXTERNAL (2.46 volts)
+    analogReference(EXTERNAL); // When taking current data use EXTERNAL (2.46 volts)
   }
   else // Take voltage reading
   {
