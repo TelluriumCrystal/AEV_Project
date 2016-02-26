@@ -89,7 +89,7 @@ int nBytes                           = 0;         // Number of bytes EEProm reco
 
 // Quadrature Encoder
 boolean encoderSetA                  = false;     // Boolean quadrature encoder for sensor A
-boolean encoderSetB                  = false;     // Boolean quadrature encoder for sensor A
+boolean encoderSetB                  = false;     // Boolean quadrature encoder for sensor B
 volatile int encoderPos              =     0;     // Position
 volatile unsigned int encoderTotal   =     0;     // Total accumulation of marks
 volatile unsigned int encoderForSum  =     0;     // Forward sum
@@ -128,26 +128,26 @@ void setup()
   pinMode(hblogic1a,OUTPUT);     // Set Motor 1 direction pin A mode
   pinMode(hblogic1b,OUTPUT);     // Set Motor 1 direction pin B mode
   digitalWrite(hblogic1a,HIGH);  // Set Motor 1 direction pin A HIGH
-  digitalWrite(hblogic1b,LOW);   // Set Motor 1 direction pin A LOW
+  digitalWrite(hblogic1b,LOW);   // Set Motor 1 direction pin B LOW
 
-    pinMode(pwmPin2,OUTPUT);       // Set Motor 2 mode
+  pinMode(pwmPin2,OUTPUT);       // Set Motor 2 mode
   pinMode(hblogic2a,OUTPUT);     // Set Motor 2 direction pin A mode
   pinMode(hblogic2b,OUTPUT);     // Set Motor 2 direction pin B mode
   digitalWrite(hblogic2a,HIGH);  // Set Motor 2 direction pin A HIGH
-  digitalWrite(hblogic2b,LOW);   // Set Motor 2 direction pin A LOW
+  digitalWrite(hblogic2b,LOW);   // Set Motor 2 direction pin B LOW
 
-    pinMode(pwmPin3,OUTPUT);       // Set Motor 3 mode (optional)
+  pinMode(pwmPin3,OUTPUT);       // Set Motor 3 mode (optional)
   pinMode(hblogic3a,OUTPUT);     // Set Motor 3 direction pin A mode
   pinMode(hblogic3b,OUTPUT);     // Set Motor 3 direction pin B mode
   digitalWrite(hblogic3a,HIGH);  // Set Motor 3 direction pin A HIGH
-  digitalWrite(hblogic3b,LOW);   // Set Motor 3 direction pin A LOW
+  digitalWrite(hblogic3b,LOW);   // Set Motor 3 direction pin B LOW
   // --------------------------------------------------------------------------
 
   // Quadrature Encoder Setup--------------------------------------------------
   pinMode(encoderPinA,INPUT_PULLUP);      // Set encoderPinA mode
   pinMode(encoderPinB,INPUT_PULLUP);      // Set encoderPinB mode
   attachInterrupt(1,quadEncoderA,CHANGE); // Attach interrupt to A (pin 3 == 1)
-  attachInterrupt(0,quadEncoderB,CHANGE); // Attach interrupt to A (pin 2 == 0)
+  attachInterrupt(0,quadEncoderB,CHANGE); // Attach interrupt to B (pin 2 == 0)
   // --------------------------------------------------------------------------
 
   // Yellow LED Pin & Button Bypass--------------------------------------------
