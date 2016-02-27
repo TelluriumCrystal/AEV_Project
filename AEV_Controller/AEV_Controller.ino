@@ -34,6 +34,10 @@
  date December 21, 2014 
  - Fixed bug regarding variable types mismatch in encoder subroutines  
  goToRelativePostion & goToAbsolutePosition
+
+ date February 26, 2016
+ - Added EAEV (Extended Alternate Energy Vehicle) functionality:
+    - 
  */
 
 // ---------------------------------------------------------------------------
@@ -96,6 +100,13 @@ volatile unsigned int encoderForSum  =     0;     // Forward sum
 volatile int encoderBackSum          =     0;     // Backward sum
 volatile byte dir                    =     2;     // Direction: 1 = Forward; 0 = Reverse, 2 = No Direction.
 
+// EAEV: Velocity & Acceleration calculaton
+const float deceleration            = -1;         // Predetermined deceleration rate of the AEV with no motors running in marks/second^2
+float acceleration                  = 0;          // Calculated acceleration of the AEV, in marks/second^2
+float velocities[2]                 = {0,0};      // 2 calculated velocities of the AEV, in marks/second - used in calculating acceleration
+int positions[3]                    = {0,0,0};    // 3 position values in marks - used in calculating velocity
+unsigned long times[3]              = {0,0,0};    // 3 time values in seconds - used in calculating velocity and acceleration
+
 // AEV Servo
 Servo aevServo;
 
@@ -106,7 +117,7 @@ struct config_t
   int cvolts;               // current counts
   int bvolts;               // voltage counts
   unsigned int tMarks;      // Total marks during AEV run. (Cumulative Count)
-  int pMarks;               // Position of AEV, in marks.   
+  int pMarks;               // Position of AEV, in marks.
 } 
 configuration;
 
