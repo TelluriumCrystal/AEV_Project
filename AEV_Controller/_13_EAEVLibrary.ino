@@ -31,7 +31,7 @@ void calculateAcceleration()
   acceleration = (velocities[2] - velocities[1])/((float)times[4]-(float)times[1]);
 }
 
-// (2) Cycle the position and time data and add a new value to the end of the arrays
+// (3) Cycle the position and time data and add a new value to the end of the arrays
 
 void grabPositionTimeData()
 {
@@ -52,7 +52,7 @@ void grabPositionTimeData()
   times[1] = timeNow();
 }
 
-// (3) Move to the specified absolute position using the specified motor precentage
+// (4) Move to the specified absolute position using the specified motor precentage
 
 // Key for motor value:
 // 1 = only motor 1
