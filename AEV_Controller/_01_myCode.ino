@@ -60,16 +60,30 @@ void myCode()
 
   */
 
+  // Minimum motor speed of 12 to move propellors, 17 to produce meaningful thrust
+
   // Reverse motors to make AEV go forward
   reverse(4);
   
   
   // Main code
-  motorSpeed(4,25);
-  goToAbsolutePosition(330-40);
+  for(int x = 1; x < 25; x++)
+  {
+    motorSpeed(4,x);
+    goFor(2);
+    brake(4);
+    goFor(5);
+  }
+  
+  /*celerate(4,10,20,1);
+  motorSpeed(4,20);
+  goFor(2);
+  celerate(4,20,15,2);
+  motorSpeed(4,15);
+  goToRelativePosition(290);
   reverse(4);
-  motorSpeed(4,25);
-  goFor(2.5);
+  // motorSpeed(4,17);
+  // goFor(1.5);
   brake(4);
   reverse(4);
   
@@ -101,7 +115,7 @@ void myCode()
   goFor(2.5);
   brake(4);
   
-  goFor(3);
+  goFor(3);*/
   
   
   // And here--------------------------------------------------------------------------------
