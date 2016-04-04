@@ -68,38 +68,32 @@ void myCode()
   
   // Main code
   
-  celerate(4,17,25,1);
+  celerate(4,17,25,0.5);
   motorSpeed(4,25);
-  goToAbsolutePosition(190);
+  goToAbsolutePosition(226);
   brake(4);
   
-  goFor(8);
+  goFor(11);
   
+  celerate(4,17,25,0.5);
   motorSpeed(4,25);
-  goToAbsolutePosition(250);
+  goToAbsolutePosition(630);
   brake(4);
   
-  /*goFor(3);
+  goFor(15);
   
+  reverse(4);
+  celerate(4,17,35,0.5);
   motorSpeed(4,35);
   goToAbsolutePosition(515);
-  reverse(4);
-  motorSpeed(4,35);
-  goFor(2.5);
-  brake(4);
-  reverse(4);
-  
-  goFor(8);
-  
-  motorSpeed(4,35);
-  goToAbsolutePosition(100);
-  reverse(4);
-  motorSpeed(4,35);
-  goFor(2.5);
   brake(4);
   
-  goFor(3);*/
+  goFor(11);
   
+  celerate(4,17,35,0.5);
+  motorSpeed(4,35);
+  goToAbsolutePosition(150);
+  brake(4);
   
   // And here--------------------------------------------------------------------------------
 
