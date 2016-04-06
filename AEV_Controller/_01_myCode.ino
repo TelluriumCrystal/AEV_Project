@@ -65,34 +65,32 @@ void myCode()
   // Reverse motors to make AEV go forward
   reverse(4);
   
-  
   // Main code
+  celerate(4,17,25,0.5);
+  motorSpeed(4,25);
+  goToAbsolutePosition(185);
+  brake(4);
+  
+  goFor(13);
   
   celerate(4,17,25,0.5);
   motorSpeed(4,25);
-  goToAbsolutePosition(226);
+  goToAbsolutePosition(610);
   brake(4);
   
-  goFor(11);
-  
-  celerate(4,17,25,0.5);
-  motorSpeed(4,25);
-  goToAbsolutePosition(630);
-  brake(4);
-  
-  goFor(15);
+  goFor(12);
   
   reverse(4);
   celerate(4,17,35,0.5);
   motorSpeed(4,35);
-  goToAbsolutePosition(515);
+  goToAbsolutePosition(655);
   brake(4);
   
-  goFor(11);
+  goFor(13);
   
   celerate(4,17,35,0.5);
   motorSpeed(4,35);
-  goToAbsolutePosition(150);
+  goToAbsolutePosition(270);
   brake(4);
   
   // And here--------------------------------------------------------------------------------
